@@ -56,9 +56,10 @@ body {
 .distance {
 	padding: 6rem 0 0 0;
 }
+
 /*---------------HEADER---------------------*/
 .head-banner {
-	background-image: url('dist/css/img/header-banner.png');
+	background-image: url('img/header-banner.png');
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
@@ -92,7 +93,89 @@ h2 {
 	}
 }
 
-/*---------------FOOTER--------------------*/
+
+/*---------------TEAM----------------------*/
+.team {
+	p {
+		font-size: @textFont;
+		color: @fontColor;
+	}
+}
+.thumbnail {
+	border: none;
+
+	h4 {
+		font-size: @h4Font;
+		color: @hColor;
+		font-weight: bold;
+	}
+	small {
+			font-size: @captionFont;
+			color: @captionColor;
+		}
+	p {
+		font-size: @captionFont;
+		color: @captionColor;
+	}
+}
+.fa {
+	width: 3.5rem;
+	height: 3.5rem;
+	color: @whtColor;
+	background-color: @navy;
+	display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+.fa-team {
+		padding-top: 1rem;
+}
+.fa:not(.fa-twitter) {
+	margin-left: 1rem;
+}
+/*---------------SERVICES----------------------*/
+.services {
+	.caption-p;
+	padding-bottom: 6rem;
+
+	h3{
+		font-size: @h3Font;
+		color: @hColor; 
+	} 
+
+}
+.audio {
+	margin-left: 1.1rem;
+}
+/*---------------FEATURES----------------------*/
+.features {
+	height: 25rem;
+	background-color: @bgcGrey;
+
+	h2{
+		font-size: @h2Font;
+		color: @whtColor;
+		padding-top: 10rem;
+	}
+	.features-title {
+		background-color: @navy;
+		height: 25rem;
+		line-height: 25rem;
+	}
+	.media {
+		padding-top: 4rem;
+
+		.media-object {
+			margin-right: 2rem;
+		}
+	}
+	p {
+		font-size: @captionFont;
+		color: @captionColor;
+	}
+}
+/*---------------FOOTER------------------------*/
 footer {
 	height: 6rem;
 	line-height: 6rem;
