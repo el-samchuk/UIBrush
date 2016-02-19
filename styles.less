@@ -39,7 +39,7 @@ body {
 	color: @captionColor;
 }
 .btn-main () {
-	border-radius: 0 !important; 
+	border-radius: 0; 
 	border-color: @borderColor;
 	background-color: @whtColor;
 	font-size: @btnFont;
@@ -65,15 +65,52 @@ body {
 	background-size: cover;
 	width: 100%;
 	height: 62.9rem;
-}
 
+		.container {
+			padding-top: 3.3rem;
+		}
+}
+header {
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: inherit;
+		}
+	}
+	.logo {
+		font-size: @h1Font;
+		color: @orangeColor;
+
+		span {
+			color: @whtColor;
+		}
+	}
+}
+.header-title {
+	margin-top: 18rem;
+
+	h1 {
+		font-size: @h1Font;
+		color: @whtColor;
+
+		span {
+			color: @orangeColor;
+		}
+	}
+	p {
+		font-size: @h4Font;
+		color: @whtColor;
+	}
+}
 /*---------------ABOUT US------------------*/
 .about-us {
 	background-color: @bgcGrey;
-	height: 22.8rem;
+	height: 100%;
 	
 	p {
 		.caption-p;
+		padding-bottom: 6rem;
 	}
 }
 h2 {
@@ -174,6 +211,31 @@ h2 {
 		font-size: @captionFont;
 		color: @captionColor;
 	}
+}
+.media-img {
+			padding-left: 1rem;
+}
+/*---------------CONTACT-----------------------*/
+.contact {
+	.caption-p;
+
+	.btn {
+		.btn-main;
+		margin-bottom: 6rem;
+	}
+}
+.form-control {
+	border-radius: 0;
+	font-size: @captionFont;
+	color: @captionColor;
+}
+.form-control:not(textarea) {
+	height: 6rem;
+	margin-bottom: 1.8rem;
+}
+textarea {
+	resize: none;
+	overflow: auto;
 }
 /*---------------FOOTER------------------------*/
 footer {
