@@ -61,10 +61,17 @@ body {
 .head-banner {
 	background-image: url('img/header-banner.png');
 	background-repeat: no-repeat;
-	background-position: top;
+	background-position: top; 
+	/*-webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;*/
 	background-size: cover;
-	width: 100%;
-	height: 62.9rem;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		-ms-background-size: cover;
+	min-height: 62.9rem;
 
 		.container {
 			padding-top: 3.3rem;
@@ -86,6 +93,13 @@ header {
 			color: @whtColor;
 		}
 	}
+	.fa-up {
+		color: @whtColor;
+		padding-left: 0.5rem;
+	}
+	ul li {
+		display: inline-block;
+	}
 }
 .header-title {
 	margin-top: 18rem;
@@ -101,12 +115,35 @@ header {
 	p {
 		font-size: @h4Font;
 		color: @whtColor;
+		padding-bottom: 6rem;
+	}
+}
+.header-right {
+	float: right;
+}
+.header-left {
+	float: left;
+}
+@media only screen and (max-width: 320px) {
+	.header-title {
+		margin-top: 4rem !important;
+	}
+}	
+@media only screen and (max-width: 480px) {
+	.header-title {
+		margin-top: 10rem;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.header-title {
+		margin-top: 13rem;
 	}
 }
 /*---------------ABOUT US------------------*/
 .about-us {
 	background-color: @bgcGrey;
 	height: 100%;
+
 	
 	p {
 		.caption-p;
@@ -120,6 +157,9 @@ h2 {
 }
 /*---------------HISTORY--------------------*/
 .history {
+	div {
+		display: block;
+	}
 	p {
 		font-size: @textFont;
 		color: @fontColor;
@@ -127,9 +167,23 @@ h2 {
 	.btn {
 		.btn-main;
 		margin-top: 3rem;
+		margin-bottom: 3rem;
 	}
 }
-
+@media only screen and (max-width: 320px) {
+	.history {
+		p {
+			margin: 0 1rem 0 1rem;
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.history {
+		p {
+			margin: 0 1rem 0 1rem;
+		}
+	}
+}
 
 /*---------------TEAM----------------------*/
 .team {
@@ -154,27 +208,53 @@ h2 {
 		font-size: @captionFont;
 		color: @captionColor;
 	}
+	.fa-team {
+		width: 3.5rem;
+		height: 3.5rem;
+		color: @whtColor;
+		background-color: @navy;
+		display: inline-block;
+	    text-align: center;
+	    margin-top: 2rem;
+	    padding-top: 1rem;
+	}
+	.fa:not(.fa-twitter) {
+		margin-left: 1rem;
+	}
 }
-.fa {
-	width: 3.5rem;
-	height: 3.5rem;
-	color: @whtColor;
-	background-color: @navy;
-	display: inline-block;
-    text-align: center;
-    margin-top: 2rem;
+@media only screen and (max-width: 480px) {
+	.team {
+		.thumbnail {
+			width: 27rem;
+			display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.team {
+		.thumbnail {
+			display: block;
+    		margin-left: auto;
+    		margin-right: auto;
 
+    			.caption {
+    				padding-right: 2rem;
+    				text-align: center;
+    			}
+		}
+	}
 }
-.fa-team {
-		padding-top: 1rem;
-}
-.fa:not(.fa-twitter) {
-	margin-left: 1rem;
-}
+
 /*---------------SERVICES----------------------*/
 .services {
 	.caption-p;
 	padding-bottom: 6rem;
+	.service-img {
+		padding-bottom: 3rem;
+	}
+
 
 	h3{
 		font-size: @h3Font;
@@ -211,9 +291,26 @@ h2 {
 		font-size: @captionFont;
 		color: @captionColor;
 	}
-}
-.media-img {
+	.media-img {
 			padding-left: 1rem;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.features {
+		height: 85rem !important;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.features {
+		height: 75rem !important;
+		padding-bottom: 2rem;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.features {
+		height: 55rem;
+	}
 }
 /*---------------CONTACT-----------------------*/
 .contact {
